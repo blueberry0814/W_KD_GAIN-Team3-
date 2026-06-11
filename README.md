@@ -37,7 +37,7 @@ Heavy datasets must be downloaded manually and placed in the `data/` directory b
 
 #### Criteo
 
-1. Download dataset from [Kaggle]([https://www.kaggle.com/competitions/criteo-display-ad-challenge/data](https://www.kaggle.com/datasets/mrkmakr/criteo-dataset))
+1. Download dataset from [Kaggle]([https://www.kaggle.com/competitions/criteo-display-ad-challenge/data](https://www.kaggle.com/datasets/mrkmakr/criteo-dataset)
 2. Place the file at:
    ```
    data/criteoDB/train.txt, test.txt
