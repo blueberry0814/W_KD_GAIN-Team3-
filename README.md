@@ -1,4 +1,4 @@
-# GAN-based Missing Data Imputation
+# W-KD-GAIN
 
 **Special Topics in Data Science** | 1st Semester | Team 3
 
