@@ -20,7 +20,8 @@
 > Suggested path: `assets/architecture.png`
 
 <!--
-![Architecture](assets/architecture.png)
+<img width="830" height="527" alt="그림1" src="https://github.com/user-attachments/assets/94590862-5ef7-454c-8a7d-e06bca30746d" />
+
 -->
 
 ---
@@ -63,34 +64,3 @@ GAIN/
 ```
 
 ---
-
-
-```
-
----
-
-## How to Run
-
-Open `final_code_0610.ipynb` and run all cells in order.
-
-- **Cells 1–2**: Install packages and imports
-- **Cells 3–9**: Utility, evaluation, and loader functions
-- **Cells 10–14**: Model definitions (GAIN, WGAN-FWAL, KD)
-- **Cells 15+**: Light DB experiment → Heavy DB experiment → result plots
-
-Results are saved under `results/`.
-
----
-
-## Results
-
-Output files are saved to `results/final_results_<date>/`:
-
-| File | Description |
-|---|---|
-| `light_final_*.csv` | Per-dataset per-missing-rate metrics (Light) |
-| `heavy_final_*.csv` | Per-dataset per-missing-rate metrics (Heavy) |
-| `all_results_*.csv` | Combined results |
-| `efficiency_*.csv` | FLOPs, latency, parameter counts |
-| `fig_*.png` | RMSE / MAE plots |
-| `table_*.png` | Summary tables |
