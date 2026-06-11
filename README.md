@@ -34,7 +34,6 @@ Heavy datasets must be downloaded manually and placed in the `data/` directory b
    ```
    data/HIGGS.csv
    ```
-   > ~1.1 GB uncompressed. Contains 11M rows × 28 features. Only the first `max_samples` rows are loaded (default: 100,000).
 
 #### Criteo
 
