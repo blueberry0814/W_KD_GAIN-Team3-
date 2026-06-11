@@ -16,13 +16,8 @@
 
 ## Architecture
 
-> Place your architecture diagram here.
-> Suggested path: `assets/architecture.png`
+<img width="830" height="527" alt="그림1" src="https://github.com/user-attachments/assets/8819ee17-0ca4-4ab6-9698-b48258b88771" />
 
-<!--
-<img width="830" height="527" alt="그림1" src="https://github.com/user-attachments/assets/94590862-5ef7-454c-8a7d-e06bca30746d" />
-
--->
 
 ---
 
