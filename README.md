@@ -6,15 +6,11 @@
 
 ## Overview
 
-This project benchmarks three GAN-based missing data imputation models across both small and large-scale tabular datasets under MCAR (Missing Completely At Random) conditions.
-
 | Model | Description |
 |---|---|
 | **GAIN** | Generative Adversarial Imputation Networks (baseline) |
 | **WGAN-FWAL** | Wasserstein GAN with Feature-Weighted Adaptive Loss |
 | **KD (2-stage)** | Knowledge Distillation — Student trained from WGAN-FWAL Teacher |
-
-**Evaluation metrics**: RMSE, MAE, AUROC, PredAUC, FLOPs, Latency, FID, Diversity
 
 ---
 
@@ -31,18 +27,6 @@ This project benchmarks three GAN-based missing data imputation models across bo
 
 ## Datasets
 
-### Light Datasets (auto-downloaded)
-
-Light datasets are fetched automatically from the [UCI ML Repository](https://archive.ics.uci.edu/) via `ucimlrepo` at runtime. No manual setup required.
-
-| Dataset | UCI ID | Rows | Features | Missing Rates Tested |
-|---|---|---|---|---|
-| Breast Cancer | 14 | 569 | 30 | 5%, 10%, 20%, 30%, 50% |
-| Spam | 94 | 4,601 | 57 | 5%, 10%, 20%, 30%, 50% |
-| Credit | 222 | 1,000 | 20 | 5%, 10%, 20%, 30%, 50% |
-| Wine | 109 | 6,497 | 11 | 5%, 10%, 20%, 30%, 50% |
-| Student | 697 | 649 | 30 | 5%, 10%, 20%, 30%, 50% |
-
 ### Heavy Datasets (manual download required)
 
 Heavy datasets must be downloaded manually and placed in the `data/` directory before running the heavy experiment cells.
@@ -58,12 +42,12 @@ Heavy datasets must be downloaded manually and placed in the `data/` directory b
 
 #### Criteo
 
-1. Download `train.txt` from [Kaggle — Criteo Display Advertising Challenge](https://www.kaggle.com/competitions/criteo-display-ad-challenge/data)
+1. Download dataset from [Kaggle]([https://www.kaggle.com/competitions/criteo-display-ad-challenge/data](https://www.kaggle.com/datasets/mrkmakr/criteo-dataset))
 2. Place the file at:
    ```
-   data/criteoDB/train.txt
+   data/criteoDB/train.txt, test.txt
    ```
-   > ~11 GB uncompressed. Contains ~45M rows. Only 13 integer features (columns 2–14) are used; the 26 categorical hash features are excluded. Only the first `max_samples` rows are loaded (default: 100,000).
+
 
 **Expected directory structure after setup:**
 
@@ -73,25 +57,15 @@ GAIN/
 │   ├── HIGGS.csv
 │   └── criteoDB/
 │       └── train.txt
+│       └── test.txt
 ├── results/
 └── final_code_0610.ipynb
 ```
 
 ---
 
-## Requirements
 
-- Python 3.10+
-- CUDA 12.x compatible GPU (recommended)
-
-Install dependencies (run Cell 1 in the notebook, or manually):
-
-```bash
-pip install torch --index-url https://download.pytorch.org/whl/cu126
-pip install pandas matplotlib seaborn scikit-learn ucimlrepo tqdm scipy
 ```
-
-> If your CUDA driver version differs, replace `cu126` with the appropriate build tag (e.g. `cu124`, `cu121`). Check your driver version with `nvidia-smi`.
 
 ---
 
